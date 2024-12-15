@@ -1,0 +1,31 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36" version="25.0.1">
+  <diagram name="페이지-1" id="MGeLc8u1me7P2fR-zxna">
+    <mxGraphModel dx="5610" dy="3412" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="T5nFCu3ckxrPEPk0Xfb8-1" value="Post" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="95" y="-60" width="240" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="T5nFCu3ckxrPEPk0Xfb8-2" value="&lt;div&gt;- postId : Long&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;- userId : Long&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;div&gt;&lt;div&gt;- title : Title&amp;nbsp;&lt;/div&gt;&lt;div&gt;&lt;br class=&quot;Apple-interchange-newline&quot;&gt;- content : Content&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- category : Category&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- createdAt : LocalDate&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;- updatedAt: LocalDate&lt;/div&gt;&lt;div&gt;&amp;nbsp;&lt;/div&gt;&lt;/div&gt;&lt;/div&gt;&lt;div&gt;- status : Status (모집중, 모집완료)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="T5nFCu3ckxrPEPk0Xfb8-1">
+          <mxGeometry y="30" width="240" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="T5nFCu3ckxrPEPk0Xfb8-3" value="&lt;strong&gt;비즈니스 로직의 캡슐화&lt;/strong&gt;: &lt;code&gt;Title&lt;/code&gt; 객체는 제목과 관련된 비즈니스 로직을 캡슐화할 수 있습니다. 예를 들어, 제목의 유효성 검사를 &lt;code&gt;Title&lt;/code&gt; 객체 내부에서 처리하면, &lt;code&gt;Post&lt;/code&gt; 엔티티가 단순해지고, 코드의 응집도가 높아집니다." style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="-75" y="-70" width="140" height="100" as="geometry" />
+        </mxCell>
+        <mxCell id="T5nFCu3ckxrPEPk0Xfb8-4" value="&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;Category" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="355" y="-60" width="240" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="T5nFCu3ckxrPEPk0Xfb8-5" value="&lt;div&gt;QUESTION(&quot;Question&quot;, &quot;질문&quot;),&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;STUDY(&quot;Study&quot;, &quot;스터디 구해요&quot;)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;WORRIES(&quot;Worries&quot;, &quot;고민 있어요&quot;)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="T5nFCu3ckxrPEPk0Xfb8-4">
+          <mxGeometry y="30" width="240" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="T5nFCu3ckxrPEPk0Xfb8-6" value="&amp;lt;&amp;lt;Enum&amp;gt;&amp;gt;Status" style="swimlane;fontStyle=0;childLayout=stackLayout;horizontal=1;startSize=30;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;rounded=1;" vertex="1" parent="1">
+          <mxGeometry x="625" y="-60" width="240" height="290" as="geometry" />
+        </mxCell>
+        <mxCell id="T5nFCu3ckxrPEPk0Xfb8-7" value="Recuriting(모집중),&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;Recruitment Closed(모집 완료)&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;rotatable=0;whiteSpace=wrap;html=1;" vertex="1" parent="T5nFCu3ckxrPEPk0Xfb8-6">
+          <mxGeometry y="30" width="240" height="260" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
