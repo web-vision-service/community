@@ -7,7 +7,6 @@ import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
-import java.time.LocalDateTime;
 
 @Getter
 @Entity
@@ -15,7 +14,7 @@ import java.time.LocalDateTime;
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class Post {
+public class Post extends BaseEntity {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,9 +32,7 @@ public class Post {
     @Enumerated(EnumType.STRING)
     private Status status;
 
-    private LocalDateTime createdAt;
 
-    private LocalDateTime updatedAt;
 
 
 
@@ -44,8 +41,6 @@ public class Post {
         this.title = new Title(postUpdateRequestDto.getTitle());
 
         this.content = new Content(postUpdateRequestDto.getContent());
-
-        this.updatedAt = LocalDateTime.now();
 
         this.status = postUpdateRequestDto.getStatus();
 

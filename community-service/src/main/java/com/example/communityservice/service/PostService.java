@@ -21,7 +21,7 @@ public class PostService {
     public List<PostResponseDto> getPosts() {
         return postRepository.findAll()
                 .stream()
-                .map(post -> new PostResponseDto(post.getTitle().getTitle(), post.getCreatedAt(), post.getUpdatedAt(),post.getCategory(), post.getStatus()))
+                .map(post -> new PostResponseDto(post.getTitle().getTitle(),post.getCategory(), post.getStatus()))
                 .toList();
     }
 
